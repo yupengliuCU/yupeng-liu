@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Data | Yupeng Liu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
+<style>
+:root{
+  --ink:#10243F; --ink-soft:#4C5B70; --rule:#D8DEE6; --paper:#FFFFFF;
+  --red:#D9432F; --blue:#3F7FC4; --gold:#E6B400; --green:#2F8F6E;
+  --wash:rgba(16,36,63,.08); --mark:rgba(255,203,5,.55); --mark-ink:#10243F;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --col-margin:11rem; --col-main:40rem; --col-side:13rem; --gap:2.75rem;
+  --page:calc(var(--col-margin) + var(--col-main) + var(--col-side) + 2*var(--gap));
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ink:#E4EAF2; --ink-soft:#A4B1C3; --rule:#2A3649; --paper:#0F1826;
+  --red:#EE6B55; --blue:#71A8E2; --gold:#F0C83A; --green:#4FB892;
+  --wash:rgba(228,234,242,.09); --mark:#F0C83A; --mark-ink:#0F1826; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#E4EAF2; --ink-soft:#A4B1C3; --rule:#2A3649; --paper:#0F1826;
+  --red:#EE6B55; --blue:#71A8E2; --gold:#F0C83A; --green:#4FB892;
+  --wash:rgba(228,234,242,.09); --mark:#F0C83A; --mark-ink:#0F1826; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{font-size:18px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.55;font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-decoration-thickness:1px;text-underline-offset:.2em;transition:text-decoration-color .15s}
+a:hover{text-decoration-color:var(--ink)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+p{margin:0}
+img{max-width:100%}
+
+/* reading grid */
+.row{display:grid;grid-template-columns:var(--col-margin) minmax(0,var(--col-main)) var(--col-side);column-gap:var(--gap);justify-content:center;padding-inline:max(1rem,4vw)}
+.mg{text-align:right;font-style:italic;color:var(--ink-soft);font-size:.95rem}
+.sect{font-style:italic;font-size:1.05rem;color:var(--ink);text-align:right;padding-top:.15rem}
+.page{max-width:calc(var(--page) + 8vw);margin:0 auto;padding-inline:max(1rem,4vw)}
+
+/* nav */
+.top{border-bottom:1px solid var(--rule)}
+.top .page{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem 1.5rem;flex-wrap:wrap;padding-block:1rem}
+.top .me{font-size:1.05rem;text-decoration:none}
+.top ul{display:flex;flex-wrap:wrap;gap:.25rem 1.4rem;list-style:none;margin:0;padding:0;font-size:.95rem}
+.top ul a{text-decoration:none;color:var(--ink-soft)}
+.top ul a:hover{color:var(--ink)}
+.top ul a[aria-current]{color:var(--ink);text-decoration:underline;text-decoration-color:var(--ink)}
+
+/* hero */
+.hero{padding-block:3.5rem 3rem;align-items:center}
+.hero-text{grid-column:1 / 3;grid-row:1;max-width:33rem}
+.portrait{grid-column:2 / 4;grid-row:1;justify-self:end;margin:0;width:min(23rem,38vw)}
+.portrait img{display:block;width:100%;height:auto}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .portrait img{border-radius:6px;filter:brightness(.88);-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 46%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 46%,#000 62%,transparent 100%)}}
+:root[data-theme="dark"] .portrait img{border-radius:6px;filter:brightness(.88);-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 46%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 46%,#000 62%,transparent 100%)}
+.hero h1{font-size:2.6rem;line-height:1.1;letter-spacing:-.005em}
+.hero .role{color:var(--ink-soft);margin-top:.5rem;font-size:1rem}
+.hero .statement{font-size:1.12rem;max-width:27em;margin-top:1.4rem}
+.hero .contact{list-style:none;margin:0;padding:1.2rem 0 0;font-size:.95rem;display:flex;flex-wrap:wrap;gap:.25rem 1.2rem}
+.hero .contact .addr{color:var(--ink-soft);user-select:all}
+@media (max-width:520px){.hero .contact .addr{flex-basis:100%}}
+
+/* areas */
+.areas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);max-width:calc(var(--page) + 8vw);margin:0 auto 3.5rem;padding-inline:max(1rem,4vw)}
+.area{border-top:2px solid var(--ink);padding-top:.75rem;display:flex;flex-direction:column;align-items:flex-start}
+.area h2{font-size:1.05rem;font-weight:500}
+.area p{font-size:.95rem;color:var(--ink-soft);margin-top:.35rem}
+.area a{font-size:.95rem;display:inline-block;margin-top:auto;padding-top:.5rem}
+
+/* section heads */
+.shead{padding-block:3.25rem 1.5rem;border-top:1px solid var(--rule)}
+.shead h2{font-size:1.6rem;line-height:1.2}
+.shead p:not(.sect){color:var(--ink-soft);margin-top:.4rem;font-size:.95rem}
+.shead p.lede{color:var(--ink);font-size:1.12rem;margin-top:0;max-width:29em;text-wrap:balance}
+
+/* scenes */
+.scene{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,25rem);gap:3rem;align-items:center;max-width:calc(var(--page) + 8vw);margin:0 auto;padding:3.5rem max(1rem,4vw);border-top:1px solid var(--rule)}
+.shead + .scene{border-top:0;padding-top:1rem}
+.scene.left{grid-template-columns:minmax(0,25rem) minmax(0,1fr)}
+.scene.left .card{order:-1}
+.scene figure{margin:0;min-width:0}
+.scene svg,.mk svg{display:block;width:100%;height:auto;overflow:visible}
+.nw{white-space:nowrap}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) svg[id^="fig-"]{background:#F7F5F0;border-radius:6px;padding:12px 14px;box-sizing:border-box}}
+:root[data-theme="dark"] svg[id^="fig-"]{background:#F7F5F0;border-radius:6px;padding:12px 14px;box-sizing:border-box}
+.fcap{font-size:.85rem;line-height:1.45;color:var(--ink-soft);margin-top:.75rem}
+.scene svg.figm{display:none}
+@media (max-width:700px){.scene svg.figd{display:none}.scene svg.figm{display:block}}
+#fig-oss-dependence [data-tip] circle,#fig-conference-site rect[data-tip]{pointer-events:all} #fig-conference-site text{pointer-events:none}
+.kicker{font-style:italic;color:var(--ink-soft);margin-bottom:.35rem}
+.card h3{font-size:1.3rem;font-weight:500;line-height:1.25;margin-bottom:.75rem}
+.card>p{margin-bottom:.8rem}
+.meta{font-size:.9rem;color:var(--ink-soft);line-height:1.5}
+.meta a{color:var(--ink)}
+.meta .links{display:inline-flex;flex-wrap:wrap;gap:0 .9rem}
+details{margin-top:.7rem;font-size:.9rem}
+summary{cursor:pointer;font-style:italic;color:var(--ink-soft);list-style:none;display:inline-flex;align-items:center;gap:.4rem}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";font-style:normal;display:inline-block;width:1rem;text-align:center;border:1px solid var(--rule);line-height:1rem;font-size:.85rem}
+details[open] summary::before{content:"\2212"}
+summary:hover{color:var(--ink)}
+details p{margin-top:.6rem;line-height:1.6}
+
+/* svg text */
+svg text{font-family:var(--serif);fill:var(--ink)}
+svg .n{font-size:34px}
+svg .m{font-size:28px}
+svg .s{font-size:26px;font-style:italic;fill:var(--ink-soft)}
+svg .i{font-style:italic}
+svg .tr{fill:var(--red)} svg .tb{fill:var(--blue)} svg .tg{fill:var(--green)}
+svg .halo{paint-order:stroke;stroke:var(--paper);stroke-width:8px;stroke-linejoin:round}
+svg .halo.w{stroke-width:16px}
+svg .mob{display:none}
+.rim{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.ln{fill:none;stroke:var(--ink);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.lr{fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.lb{fill:none;stroke:var(--blue);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.lg{fill:none;stroke:var(--green);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.lsoft{fill:none;stroke:var(--ink-soft);stroke-width:2.4;stroke-linecap:round}
+.wash{fill:var(--wash)} .pap{fill:var(--paper)} .inkf{fill:var(--ink)}
+.hl{fill:var(--mark)}
+svg [data-hl]{fill:var(--mark-ink)}
+
+/* tools */
+.makes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3rem var(--gap);max-width:calc(var(--page) + 8vw);margin:0 auto;padding:0 max(1rem,4vw) 3.5rem}
+.mk .plate{border:1px solid var(--rule);padding:1rem;margin:0 0 1.25rem}
+.video{position:relative;aspect-ratio:16/9;border:1px solid var(--rule);background:var(--wash);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(16,36,63,.06),0 8px 24px rgba(16,36,63,.08)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video.poster{display:block;cursor:pointer}
+.video.poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:filter .2s}
+.video.poster:hover img{filter:brightness(.92)}
+.video.poster .play{position:absolute;left:50%;top:50%;width:4.5rem;height:4.5rem;margin:-2.25rem 0 0 -2.25rem;border-radius:50%;background:rgba(16,36,63,.86);box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.video.poster .play::after{content:"";position:absolute;left:54%;top:50%;transform:translate(-40%,-50%);border-style:solid;border-width:.8rem 0 .8rem 1.35rem;border-color:transparent transparent transparent #fff}
+#p-cl{border-top:0;padding-top:1rem}
+.tool svg .s{font-size:34px}
+.browser{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--paper);box-shadow:0 1px 2px rgba(16,36,63,.06),0 8px 24px rgba(16,36,63,.08)}
+.browser .bar{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:1px solid var(--rule);background:var(--wash)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:var(--rule);flex:none}
+.browser .bar span{margin-left:10px;flex:1;min-width:0;font:400 .72rem/1 var(--serif);color:var(--ink-soft);letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser .video{border:0;border-radius:0;box-shadow:none}
+.video.poster .play{top:78%!important;background:rgba(255,255,255,.92)!important}
+.video.poster .play::after{border-color:transparent transparent transparent #10243F!important}
+@media (max-width:520px){.video.poster .play{width:2.75rem;height:2.75rem;margin:-1.375rem 0 0 -1.375rem;top:83%!important}.video.poster .play::after{border-width:.55rem 0 .55rem .9rem}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .browser img{filter:brightness(.92)}}
+:root[data-theme="dark"] .browser img{filter:brightness(.92)}
+.browser img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:top}
+
+.mk .plate img{display:block;width:100%;height:auto}
+.mk h3{font-size:1.25rem;font-weight:500;line-height:1.25;margin-bottom:.5rem}
+.mk p{font-size:.95rem;margin-bottom:.6rem}
+
+/* data page */
+.files{width:100%;border-collapse:collapse;font-size:.95rem;margin:.4rem 0 .5rem}
+.files th{font-weight:400;font-style:italic;color:var(--ink-soft);text-align:left;padding:.35rem .75rem .35rem 0;border-bottom:1px solid var(--ink)}
+.files td{padding:.45rem .75rem .45rem 0;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums lining-nums}
+.files .n{text-align:right;padding-right:0}
+.measures{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.45rem 1rem;font-size:.95rem}
+.measures dt{font-style:italic;color:var(--ink-soft)}
+.measures dd{margin:0}
+.btn{display:inline-block;margin-top:1rem}
+.dhead p.lede{margin-top:.6rem}
+.cite{font-size:.9rem;color:var(--ink-soft);line-height:1.5}
+.cite b{display:block;font-weight:400;font-style:italic;color:var(--ink);margin-bottom:.25rem}
+
+/* talks & about */
+.list{list-style:none;margin:0;padding:0}
+.list li{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;padding-block:.55rem;border-top:1px solid var(--rule)}
+.list li:last-child{border-bottom:1px solid var(--rule)}
+.list .d{font-style:italic;color:var(--ink-soft);font-variant-numeric:lining-nums}
+.list .w .pl{color:var(--ink-soft);white-space:nowrap}
+.list .w .pl::before{content:" · "}
+.prose p{margin-bottom:1em}
+.side-list{list-style:none;margin:0;padding:0;font-size:.9rem;color:var(--ink-soft);display:grid;gap:.6rem}
+.side-list b{display:block;font-weight:400;color:var(--ink)}
+.sec{padding-block:3.25rem 1rem;border-top:1px solid var(--rule)}
+
+footer{border-top:1px solid var(--rule);margin-top:2.5rem;padding-block:1.5rem 3rem;font-size:.9rem;color:var(--ink-soft)}
+footer .links{display:flex;flex-wrap:wrap;gap:.25rem 1.2rem}
+
+@media (max-width:1100px){
+  :root{--col-margin:9rem;--col-side:10rem;--gap:2rem}
+}
+@media (min-width:901px) and (max-width:1180px){
+  .hero-text{max-width:27rem}
+  .portrait{width:min(21rem,36vw)}
+}
+@media (max-width:900px){
+  .row{grid-template-columns:minmax(0,1fr);row-gap:.75rem}
+  .mg,.sect{text-align:left}
+  .hero{padding-block:2rem 2.5rem}
+  .portrait{grid-column:1;grid-row:1;justify-self:start;width:15rem;margin-bottom:.5rem}
+  .hero-text{grid-column:1;grid-row:2;max-width:none}
+  .scene,.scene.left{grid-template-columns:minmax(0,1fr);gap:1.5rem}
+  .scene.left .card{order:0}
+  .areas{grid-template-columns:minmax(0,1fr);gap:1.5rem;padding-inline:max(1rem,4vw)}
+  .makes{grid-template-columns:minmax(0,1fr);padding-inline:max(1rem,4vw)}
+  .shead{padding-block:2.5rem 1rem}
+}
+@media (max-width:520px){
+  html{font-size:17px}
+  svg .nomob{display:none} svg .mob{display:inline} svg.usmap{overflow:visible;margin-bottom:1.6rem}
+  .list .w .pl{display:block}
+  .list .w .pl::before{content:none}
+  svg .n{font-size:44px} svg .m{font-size:38px} svg .s{font-size:38px} .tool svg .s{font-size:40px}
+  .hero{padding-block:1.25rem 2rem}
+  .portrait{width:13rem}
+  .hero h1{font-size:2.2rem}
+  .scene{padding-block:2rem}
+  .list li{grid-template-columns:minmax(0,1fr);gap:0}
+  #talks{padding-bottom:1.5rem!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="h-ink" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" style="stroke:var(--ink)" stroke-width="2"/></pattern>
+    <pattern id="h-red" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" style="stroke:var(--red)" stroke-width="2.6"/></pattern>
+    <pattern id="x-red" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V10M0 0H10" style="stroke:var(--red)" stroke-width="2.2"/></pattern>
+    <pattern id="h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="9" style="stroke:var(--blue)" stroke-width="2.6"/></pattern>
+    <pattern id="s-blue" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="2" style="fill:var(--blue)"/></pattern>
+    <pattern id="h-gold" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" style="stroke:var(--gold)" stroke-width="2.8"/></pattern>
+    <pattern id="h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="9" style="stroke:var(--green)" stroke-width="2.6"/></pattern>
+    <marker id="ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1.5 1.5 L10 6 L1.5 10.5" fill="none" style="stroke:var(--ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="ah-r" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1.5 1.5 L10 6 L1.5 10.5" fill="none" style="stroke:var(--red)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="ah-b" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1.5 1.5 L10 6 L1.5 10.5" fill="none" style="stroke:var(--blue)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="ah-g" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M1.5 1.5 L10 6 L1.5 10.5" fill="none" style="stroke:var(--green)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+</svg>
+<!--NAV--><nav class="top" aria-label="Main">
+  <div class="page">
+    <a class="me" href="index.html">Yupeng Liu</a>
+    <ul>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#tools">Tools &amp; Artifacts</a></li>
+      <li><a href="data.html" aria-current="page">Data</a></li>
+      <li><a href="index.html#talks">Talks</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="row shead dhead" id="top">
+  <p class="sect">Data</p>
+  <div>
+    <h2>Startup Cartography Project data</h2>
+    <p class="lede">Entrepreneurship statistics for the United States from 1988 to 2016, built from business registration records, for every state, metro area, county, and ZIP code. The files are free to download from Harvard Dataverse under a CC0 license, each in an academic and a policy version. The Startup Cartography Project was developed by Jorge Guzman and Scott Stern.</p>
+    <a class="btn" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BMRPVH&amp;version=7.0" target="_blank" rel="noopener">Download from Harvard Dataverse</a>
+  </div>
+  <div></div>
+</header>
+
+<section class="row sec">
+  <p class="sect">Files</p>
+  <table class="files">
+    <thead><tr><th>Geography</th><th class="n">Rows</th></tr></thead>
+    <tbody>
+      <tr><td>United States by year</td><td class="n">29</td></tr>
+      <tr><td>State by year</td><td class="n">1,444</td></tr>
+      <tr><td>Metro area by year</td><td class="n">29,661</td></tr>
+      <tr><td>County by year</td><td class="n">88,049</td></tr>
+      <tr><td>ZIP code by year</td><td class="n">824,770</td></tr>
+    </tbody>
+  </table>
+  <div></div>
+</section>
+
+<section class="row sec">
+  <p class="sect">Measures</p>
+  <dl class="measures">
+    <dt>EQI</dt><dd>Entrepreneurial quality: the average new firm’s chance of an IPO or a major acquisition</dd>
+    <dt>SFR</dt><dd>Startup formation rate: the number of new business registrations</dd>
+    <dt>RECPI</dt><dd>Regional Entrepreneurship Cohort Potential Index: the number of new firms adjusted for their quality</dd>
+    <dt>REAI</dt><dd>Regional Entrepreneurship Acceleration Index: how many high-growth outcomes a cohort actually reached, compared with what its quality predicted</dd>
+  </dl>
+  <div></div>
+</section>
+
+<section class="row sec">
+  <p class="sect">Cite</p>
+  <p class="cite">Andrews, RJ; Fazio, Catherine; Guzman, Jorge; Liu, Yupeng; Stern, Scott, 2019, “The Startup Cartography Project”, <a href="https://doi.org/10.7910/DVN/BMRPVH" target="_blank" rel="noopener">https://doi.org/10.7910/DVN/BMRPVH</a>, Harvard Dataverse, V7.</p>
+  <div></div>
+</section>
+
+<section class="row sec">
+  <p class="sect">Paper</p>
+  <p>The measures are described in <a href="index.html#p-scp">The Startup Cartography Project: Measuring and Mapping Entrepreneurial Ecosystems</a>, <i>Research Policy</i>, 2022. You can also explore the data on the <a href="https://www.startupcartography.com/" target="_blank" rel="noopener">U.S. Startup Map</a>.</p>
+  <div></div>
+</section>
+
+<!--FOOTER--><footer>
+  <div class="row">
+    <p></p>
+    <div class="links">
+      <span>Yupeng Liu, 2026</span>
+      <span>Design inspired by <a href="https://www.justinfrake.com/" target="_blank" rel="noopener">Justin Frake</a></span>
+    </div>
+    <div class="links">
+      <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="https://github.com/lypjim" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.colorado.edu/business/leeds-directory/yupeng-liu" target="_blank" rel="noopener">Leeds profile</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
