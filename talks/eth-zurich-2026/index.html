@@ -406,6 +406,13 @@ a.go:hover{text-decoration-color:var(--ink)}
 .bx a:hover{text-decoration:underline;text-decoration-color:var(--rule)}
 .bx .soft{font-size:var(--t-ann);line-height:32px}
 .bx.one a{white-space:nowrap}
+.tcol{position:absolute;top:200px}
+.tcol .th{padding:8px 0 6px;font-size:var(--t-ann);line-height:32px;color:var(--ink-soft)}
+.tcol .th.sub{margin-top:14px;border-top:1.5px solid var(--ink);padding-top:8px}
+.tx li{display:flex;align-items:baseline;padding:2px 0}
+.tx .k{flex:0 0 52px;font-size:var(--t-src);line-height:30px;color:var(--ink-soft)}
+.tx a{font-size:var(--t-src);line-height:30px;text-decoration:none;white-space:nowrap}
+.tx a:hover{text-decoration:underline;text-decoration-color:var(--rule)}
 /* B18-B24 and E1-E15: one line per entry (checked in the render) */
 /* journal tables, booktabs style: top rule, header rule, bottom rule, no verticals; fixed column
    widths (the colgroup sums to the table width); numbers decimal-aligned by alignTables(), and
@@ -1486,53 +1493,88 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 </section>
 
 <section class="slide" data-part="b" id="b-index" data-num="B" data-spec="B">
-  <h2 class="t">Backup</h2>
-  <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M128 232 H940 M980 232 H1792" style="fill:none;stroke:var(--ink);stroke-width:2.4"/></svg>
-  <div class="bcol" style="left:128px;width:812px"><p class="bh">Questions I expect</p>
-    <ol class="bx one">
-      <li><span class="k">B18</span><a class="go" href="#b18">Hardware and software: complements or substitutes?</a></li>
-      <li><span class="k">B19</span><a class="go" href="#b19">Do large or small firms do this more?</a></li>
-      <li><span class="k">B20</span><a class="go" href="#b20" style="white-space:normal">Did firms see October 2022 coming, and would that make us under- or overestimate?</a></li>
-      <li><span class="k">B21</span><a class="go" href="#b21">How did we classify AI firms? Are these model companies?</a></li>
-      <li><span class="k">B22</span><a class="go" href="#b22">Do Hugging Face and GitHub really give firms a feedback channel?</a></li>
-      <li><span class="k">B23</span><a class="go" href="#b23">Can firms in China even use GitHub?</a></li>
-      <li><span class="k">B24</span><a class="go" href="#b24">Was there an equivalent supplier to switch to?</a></li>
+  <h2 class="t">Appendix</h2>
+  <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M128 200 H668 M690 200 H1230 M1252 200 H1792" style="fill:none;stroke:var(--ink);stroke-width:2.4"/></svg>
+  <div class="tcol" style="left:128px;width:540px">
+    <p class="th">Sample and design</p>
+    <ol class="tx">
       <li><span class="k">B25</span><a class="go" href="#b25">Who is in the sample?</a></li>
-    </ol>
-    <p class="bh sub">More</p>
-    <ol class="bx one">
-      <li><span class="k">E</span><a class="go" href="#e-index">Examples from the field</a><span class="soft">&nbsp; E1–E25, with their own index</span></li>
-    </ol></div>
-  <div class="bcol" style="left:980px;width:386px"><p class="bh soft">Further backup</p>
-    <ol class="bx">
-      <li><span class="k">B1</span><a class="go" href="#b1">Is this just factor substitution?</a></li>
+      <li><span class="k">B21</span><a class="go" href="#b21">How we classified AI firms</a></li>
       <li><span class="k">B2</span><a class="go" href="#b2">Summary statistics</a></li>
       <li><span class="k">B3</span><a class="go" href="#b3">Covariate balance before and after matching</a></li>
       <li><span class="k">B4</span><a class="go" href="#b4">Alternative matching schemes</a></li>
+      <li><span class="k">B20</span><a class="go" href="#b20">Did firms see October 2022 coming?</a></li>
+      <li><span class="k">B24</span><a class="go" href="#b24">Was there an equivalent supplier?</a></li>
+      <li><span class="k">B23</span><a class="go" href="#b23">Can firms in China even use GitHub?</a></li>
+    </ol>
+    <p class="th sub">Tables and robustness</p>
+    <ol class="tx">
       <li><span class="k">B5</span><a class="go" href="#b5">Main results table</a></li>
       <li><span class="k">B6</span><a class="go" href="#b6">Mediation table</a></li>
-      <li><span class="k">B7</span><a class="go" href="#b7">Placebo tables (India: paper Table 6; Japan: new estimates, not yet in the paper)</a></li>
-      <li><span class="k">B8</span><a class="go" href="#b8">Event studies, paper: main sample</a></li>
-      <li><span class="k">B9</span><a class="go" href="#b9">Event studies, March 2026 package: China against India</a></li>
-    </ol></div>
-  <div class="bcol" style="left:1406px;width:386px"><p class="bh soft">&nbsp;</p>
-    <ol class="bx">
-      <li><span class="k">B10</span><a class="go" href="#b10">Event studies, March 2026 package: India placebo</a></li>
-      <li><span class="k">B11</span><a class="go" href="#b11">Dose-response: the slope is clear for gatekeeping, forks and PRs</a></li>
+      <li><span class="k">B7</span><a class="go" href="#b7">Placebo tables: India and Japan</a></li>
+      <li><span class="k">B8</span><a class="go" href="#b8">Event studies: main sample</a></li>
+      <li><span class="k">B9</span><a class="go" href="#b9">Event studies: China against India</a></li>
+      <li><span class="k">B10</span><a class="go" href="#b10">Event studies: India placebo</a></li>
+      <li><span class="k">B11</span><a class="go" href="#b11">Dose-response</a></li>
       <li><span class="k">B12</span><a class="go" href="#b12">Repo-active firms</a></li>
+    </ol>
+  </div>
+  <div class="tcol" style="left:690px;width:540px">
+    <p class="th">Mechanism and alternatives</p>
+    <ol class="tx">
+      <li><span class="k">B1</span><a class="go" href="#b1">Is this just factor substitution?</a></li>
+      <li><span class="k">B18</span><a class="go" href="#b18">Hardware and software: complements?</a></li>
+      <li><span class="k">B19</span><a class="go" href="#b19">Large or small firms?</a></li>
+      <li><span class="k">B22</span><a class="go" href="#b22">Do Hugging Face and GitHub give feedback?</a></li>
+      <li><span class="k">E8</span><a class="go" href="#e8">Is this just state policy?</a></li>
+      <li><span class="k">E19</span><a class="go" href="#e19">Why outsiders contribute</a></li>
+      <li><span class="k">E12</span><a class="go" href="#e12">Open the model, depend on its servers</a></li>
+      <li><span class="k">E22</span><a class="go" href="#e22">DeepSeek chose to depend on outsiders</a></li>
+      <li><span class="k">E21</span><a class="go" href="#e21">PaddlePaddle: outsiders earn write access</a></li>
       <li><span class="k">B13</span><a class="go" href="#b13">More questions, short answers</a></li>
-      <li><span class="k">B14</span><a class="go" href="#b14">References: open and user innovation</a></li>
-      <li><span class="k">B15</span><a class="go" href="#b15">References: dependence, strategy and methods</a></li>
-      <li><span class="k">B16</span><a class="go" href="#b16">Open weights are now strategic on both sides</a></li>
+    </ol>
+    <p class="th sub">Chips and compute</p>
+    <ol class="tx">
+      <li><span class="k">E1</span><a class="go" href="#e1">DeepSeek-V4: tested on NVIDIA and Huawei</a></li>
+      <li><span class="k">E2</span><a class="go" href="#e2">NVIDIA-first tools now ship for Huawei</a></li>
+      <li><span class="k">E3</span><a class="go" href="#e3">Cheaper AI, more demand for compute</a></li>
+      <li><span class="k">E4</span><a class="go" href="#e4">A demand shock for Chinese chipmakers</a></li>
+      <li><span class="k">E6</span><a class="go" href="#e6">Huawei did it first, after 2019</a></li>
+      <li><span class="k">E9</span><a class="go" href="#e9">Four years on, compute still binds</a></li>
+    </ol>
+  </div>
+  <div class="tcol" style="left:1252px;width:540px">
+    <p class="th">The open-source boom</p>
+    <ol class="tx">
+      <li><span class="k">E5</span><a class="go" href="#e5">Open source sits outside export rules</a></li>
+      <li><span class="k">E16</span><a class="go" href="#e16">Downloads shift to Chinese models</a></li>
+      <li><span class="k">E17</span><a class="go" href="#e17">Developers build on Chinese models</a></li>
+      <li><span class="k">E10</span><a class="go" href="#e10">Big tech and startups both opened weights</a></li>
+      <li><span class="k">E11</span><a class="go" href="#e11">DeepSeek opened the plumbing too</a></li>
+      <li><span class="k">E7</span><a class="go" href="#e7">The West moved toward open weights</a></li>
+      <li><span class="k">E20</span><a class="go" href="#e20">Frontier labs’ more open licenses</a></li>
+      <li><span class="k">B16</span><a class="go" href="#b16">Open weights: strategic on both sides</a></li>
       <li><span class="k">B17</span><a class="go" href="#b17">Caveats on the open-source boom</a></li>
-    </ol></div>
-    <p class="src">Firm examples on these pages are illustrations. DeepSeek, Alibaba (Qwen), Moonshot (Kimi) and Baidu are not in our 664-firm estimation sample.</p>
+      <li><span class="k">E14</span><a class="go" href="#e14">Counter-evidence</a></li>
+      <li><span class="k">E15</span><a class="go" href="#e15">China’s GitHub share is undercounted</a></li>
+    </ol>
+    <p class="th sub">Beyond this case</p>
+    <ol class="tx">
+      <li><span class="k">E18</span><a class="go" href="#e18">One firm versus the whole field</a></li>
+      <li><span class="k">E23</span><a class="go" href="#e23">Other chokepoints</a></li>
+      <li><span class="k">E24</span><a class="go" href="#e24">Open hardware moved to Switzerland</a></li>
+      <li><span class="k">E13</span><a class="go" href="#e13">Recent studies and where ours sits</a></li>
+      <li><span class="k">E25</span><a class="go" href="#e25">Open questions</a></li>
+      <li><span class="k">B14</span><a class="go" href="#b14">References: open and user innovation</a></li>
+      <li><span class="k">B15</span><a class="go" href="#b15">References: dependence, strategy, methods</a></li>
+    </ol>
+  </div>
   <aside class="notes"></aside>
 </section>
 
 
 <section class="slide" data-part="b" id="b1" data-num="B1" data-spec="B1">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Is this just factor substitution?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">Not only. The two can coexist; governance moves, mediation and dose-response tell them apart.</p>
   <table class="bt roomy flush" style="top:386px;width:1664px">
@@ -1551,7 +1593,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b2" data-num="B2" data-spec="B2">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Summary statistics</h2>
   <table class="bt c28" id="t-b2" style="top:232px;width:1380px">
     <colgroup><col style="width:580px"><col style="width:200px"><col style="width:200px"><col style="width:200px"><col style="width:200px"></colgroup>
@@ -1581,7 +1623,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b3" data-num="B3" data-spec="B3">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Covariate balance before and after matching</h2>
   <table class="bt" style="top:232px;width:1664px">
     <colgroup><col style="width:524px"><col style="width:190px"><col style="width:190px"><col style="width:190px"><col style="width:190px"><col style="width:190px"><col style="width:190px"></colgroup>
@@ -1605,7 +1647,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b4" data-num="B4" data-spec="B4">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Alternative matching schemes</h2>
   <table class="bt" style="top:232px;width:1380px">
     <colgroup><col style="width:420px"><col style="width:240px"><col style="width:240px"><col style="width:240px"><col style="width:240px"></colgroup>
@@ -1632,7 +1674,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b5" data-num="B5" data-spec="B5">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Main results table</h2>
   <div class="exh" style="left:128px;top:232px;width:967.5px;height:718px"><img src="assets/paper/tab3_main_did.png" alt="Paper, Table 3 with its notes: effect of the export controls on open-source activity, governance, and community engagement"></div>
   <p class="body28" style="left:1122px;top:226px;width:670px">The paper’s Table 3, with its notes.</p>
@@ -1644,7 +1686,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b6" data-num="B6" data-spec="B6">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Mediation table</h2>
   <table class="bt" style="top:232px;width:1664px">
     <colgroup><col style="width:504px"><col style="width:290px"><col style="width:290px"><col style="width:290px"><col style="width:290px"></colgroup>
@@ -1668,7 +1710,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b7" data-num="B7" data-spec="B7">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Placebo tables</h2>
   <table class="bt tight dense" style="top:232px;width:1664px">
     <colgroup><col style="width:384px"><col style="width:160px"><col style="width:160px"><col style="width:160px"><col style="width:160px"><col style="width:160px"><col style="width:160px"><col style="width:160px"><col style="width:160px"></colgroup>
@@ -1697,7 +1739,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b8" data-num="B8" data-spec="B8">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Event studies, paper: main sample</h2>
   <div class="exh" style="left:128px;top:232px;width:703.6px;height:718px"><img src="assets/paper/fig2_event_study_lab.png" alt="Paper, Figure 2 with its notes: event-study coefficients around the October 2022 export controls, four panels"></div>
   <p class="body28" style="left:980px;top:226px;width:812px">The paper’s Figure 2, with its notes: 664 firms, 386 for gatekeeping; six-month bins with [−6,&nbsp;−1] as the reference; 90% CIs; Borusyak, Jaravel &amp; Spiess (2024).</p>
@@ -1709,7 +1751,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b9" data-num="B9" data-spec="B9">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Event studies, March 2026 package: China against India</h2>
   <div class="exh" style="left:128px;top:232px;width:585.4px;height:718px"><img src="assets/crop_Fig_DDD_ES_Combined.png" alt="March 2026 package figure: triple-difference event study, China AI firms against India, five panels"></div>
   <p class="body28" style="left:838px;top:226px;width:954px">March 2026 package, CEM-A matched sample, not the paper’s 664.</p>
@@ -1722,7 +1764,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b10" data-num="B10" data-spec="B10">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Event studies, March 2026 package: India placebo</h2>
   <div class="exh" style="left:128px;top:232px;width:605.1px;height:718px"><img src="assets/crop_Fig_India_ES_Combined.png" alt="March 2026 package figure: India placebo event study, Indian AI against non-AI firms, five panels"></div>
   <p class="body28" style="left:838px;top:226px;width:954px">March 2026 package: Indian AI against non-AI firms, CEM-A matched. India was not covered by the controls.</p>
@@ -1735,7 +1777,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b11" data-num="B11" data-spec="B11">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Dose-response: the slope is clear for gatekeeping, forks and PRs</h2>
   <table class="bt roomy" id="t-b11" style="top:232px;width:1400px">
     <colgroup><col style="width:620px"><col style="width:300px"><col style="width:260px"><col style="width:220px"></colgroup>
@@ -1755,7 +1797,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b12" data-num="B12" data-spec="B12">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Repo-active firms</h2>
   <table class="bt roomy" style="top:232px;width:1096px">
     <colgroup><col style="width:456px"><col style="width:220px"><col style="width:210px"><col style="width:210px"></colgroup>
@@ -1775,7 +1817,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b13" data-num="B13" data-spec="B13">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">More questions, short answers</h2>
   <div class="qa-grid" id="b13-grid" style="left:128px;top:232px;width:1664px">
     <div class="qa-cell"><p class="qq">Is it ChatGPT, not the controls?</p><p class="qr">India and Japan placebos and the triple differences against each, on <a class="go" href="#b7">B7</a>.</p></div>
@@ -1793,7 +1835,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b14" data-num="B14" data-spec="B14">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">References: open and user innovation</h2>
   <ul class="refs" style="left:128px;top:232px;width:528px">
     <li>Baldwin &amp; von Hippel (2011)<span class="cite"><i>Organization Science</i></span></li>
@@ -1826,7 +1868,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b15" data-num="B15" data-spec="B15">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">References: dependence, strategy and methods</h2>
   <ul class="refs dense" style="left:128px;top:232px;width:528px">
     <li>Adner &amp; Zemsky (2006)<span class="cite"><i>Strategic Management Journal</i></span></li>
@@ -1863,7 +1905,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b16" data-num="B16" data-spec="B16">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Open weights are now strategic on both sides</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M128 232 H940 M980 232 H1792" style="fill:none;stroke:var(--ink);stroke-width:2.4"/></svg>
   <p class="abs soft" style="left:128px;top:246px;font-size:28px;line-height:40px">United States</p>
@@ -1889,7 +1931,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b17" data-num="B17" data-spec="B17">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Caveats on the open-source boom</h2>
   <div class="row" style="top:232px;width:1096px;height:196px;border-top:2.4px solid var(--ink)"></div>
   <div class="row" style="top:428px;width:1096px;height:196px"></div>
@@ -1913,7 +1955,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b18" data-num="B18" data-spec="B18">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Hardware and software: complements or substitutes?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">We measure how firms organize innovation; substitution in the input mix may also have occurred.</p>
   <div class="shot" id="b18-shot" style="left:128px;top:372px;width:1096px;height:357.6px"><img src="assets/screens/crops/paper_ds_v4_codesign_clean.png" alt="DeepSeek-V4 report, Sec. 3.1: We validated the fine-grained EP scheme on both NVIDIA GPUs and HUAWEI Ascend NPUs platforms." style="left:0;top:0;width:1096px"><span class="hlb" style="left:592.1px;top:16.3px;width:485.7px;height:29.8px"></span><span class="hlb" style="left:16.3px;top:48.4px;width:750.0px;height:29.4px"></span></div>
@@ -1932,7 +1974,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b19" data-num="B19" data-spec="B19">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Do large or small firms do this more?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">We checked. The effect doesn’t differ significantly by firm size, age, VC backing or listing, though with 143 treated firms and a coarse size measure we have limited power to detect differences.</p>
   <table class="bt roomy" id="t-b19" style="top:420px;width:1400px">
@@ -1953,7 +1995,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b20" data-num="B20" data-spec="B20">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Did firms see October 2022 coming, and would that make us under- or overestimate?</h2>
   <p class="lede" style="left:128px;top:291px;width:1664px">Some news came five weeks early, with NVIDIA’s 31 Aug disclosure. Re-dating the shock to September 2022 leaves all four estimates about the same.</p>
   <table class="bt snug" id="b20-timing" style="top:428px;width:1664px">
@@ -1976,7 +2018,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b21" data-num="B21" data-spec="B21">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">How did we classify AI firms? Are these model companies?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">Mostly not. The treated group is the broader AI software sector, and most are AI application firms.</p>
   <svg class="fig" id="f-ladder" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
@@ -1988,7 +2030,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b22" data-num="B22" data-spec="B22">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Do Hugging Face and GitHub really give firms a feedback channel?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">Yes. On both, outsiders can propose changes and the firm decides what to merge.</p>
   <div class="shot" id="b22-shot" style="left:128px;top:330px;width:936.0px;height:554.4px"><img src="assets/screens/gh_ds_v3_merged.png" alt="GitHub, deepseek-ai/DeepSeek-V3, merged pull requests: Open 0, Closed 25; each listed author is marked Contributor." style="left:-18.0px;top:-18.0px;width:1792.8px"></div>
@@ -2004,7 +2046,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b23" data-num="B23" data-spec="B23">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Can firms in China even use GitHub?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">Yes. GitHub is reachable from China, if often slowly; it is Hugging Face that is blocked.</p>
   <ul class="pts lg" id="b23-pts" style="left:128px;top:340px;width:1400px">
@@ -2019,7 +2061,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b24" data-num="B24" data-spec="B24">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Was there an equivalent supplier to switch to?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">AI firms had no equivalent supplier to switch to, could not merge across the border, and could not exit AI. The whole upstream was constrained at once.</p>
   <div class="abs" style="left:128px;top:372px;width:812px"><p class="sw-a">Eric Xu, Huawei · September 2025</p>
@@ -2045,7 +2087,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="b25" data-num="B25" data-spec="B25">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Who is in the sample?</h2>
   <div class="blk" style="left:128px;top:232px;width:1664px"><span class="h">From Crunchbase software firms to the paper’s sample</span></div>
   <svg class="fig" id="f-sample" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
@@ -2056,7 +2098,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="e-index" data-num="E" data-spec="E">
-  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Backup index</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Examples from the field</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M128 232 H940 M980 232 H1792" style="fill:none;stroke:var(--ink);stroke-width:2.4"/></svg>
   <div class="bcol ei" style="left:128px;width:812px"><p class="bh soft">For color and context</p>
@@ -2096,7 +2138,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e1" data-num="E1" data-spec="E1">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">DeepSeek-V4: <span class="nw">“software-hardware co-design,”</span> tested on NVIDIA and Huawei</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path class="hair-ink" style="stroke-linecap:butt" d="M128 298 H940"/><path class="hair-ink" style="stroke-linecap:butt" d="M980 298 H1792"/><text x="980" y="406.2" class="fs28">Inference FLOPs per token</text><text x="1792" y="406.2" text-anchor="end" class="fs24 soft">DeepSeek-V3.2 <tspan class="plus">=</tspan> 100%</text><rect x="980" y="428.2" width="812" height="44" class="washf"/><rect x="980" y="428.2" width="219.2" height="44" class="inkf"/><text x="1213.2" y="462.2" class="fs34">27%</text><text x="980" y="548.3" class="fs28">KV cache</text><rect x="980" y="570.3" width="812" height="44" class="washf"/><rect x="980" y="570.3" width="81.2" height="44" class="inkf"/><text x="1075.2" y="604.3" class="fs34">10%</text><text x="980" y="667.6" class="fs24 i soft">inference only, at a 1M-token context, against DeepSeek’s own previous model</text></svg>
   <p class="abs soft" style="left:128px;top:312.58px;width:812px;font-size:28px;line-height:38px;">DeepSeek-V4 report, Sec. 3.1</p>
@@ -2111,7 +2153,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e2" data-num="E2" data-spec="E2">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">The tools first built for NVIDIA now ship for Huawei</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px"><span class="soft">Context, not a result:</span> the paper does not study hardware choices.</p>
   <table class="bt" style="left:128px;top:316px;width:1664px"><colgroup><col style="width:210px"><col style="width:370px"><col style="width:1084px"></colgroup><thead><tr><th class="soft">Date</th><th class="soft">Release</th><th class="soft">What it shows</th></tr></thead><tbody><tr><td>Dec 2024</td><td>DeepSeek-V3</td><td>“2.788M GPU hours” on 2,048 H800s: $5.576M at $2 an hour, final run only. Sec. 3.5 offers “suggestions on chip design to AI hardware vendors”</td></tr><tr><td>21 Aug 2025</td><td>DeepSeek-V3.1</td><td>“trained using the UE8M0 FP8 scale data format,” aimed at “soon-to-be-released next-generation domestic chips” (as reported by Reuters)</td></tr><tr><td>29 Sept 2025</td><td>DeepSeek-V3.2-Exp</td><td>day-0 vLLM support; first-day support from Huawei Ascend, Cambricon and Hygon</td></tr><tr><td>30 Sept 2026</td><td>DeepGEMM-Ascend, MIT</td><td>“a port of DeepGEMM to the HUAWEI Ascend platform”</td></tr></tbody></table>
@@ -2121,7 +2163,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e3" data-num="E3" data-spec="E3">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Over time, complements:<br>as AI got cheaper, demand for compute grew</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path class="hair-ink" style="stroke-linecap:butt" d="M128 298 H940"/><path class="hair-ink" style="stroke-linecap:butt" d="M980 298 H1792"/></svg>
   <p class="abs soft" style="left:128px;top:312.58px;width:812px;font-size:28px;line-height:38px;">Inference price falls</p>
@@ -2137,7 +2179,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e4" data-num="E4" data-spec="E4">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">For Chinese chipmakers, the controls were a demand shock</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path class="hair-ink" style="stroke-linecap:butt" d="M128 372 H940"/><path class="hair-ink" style="stroke-linecap:butt" d="M980 372 H1792"/><rect x="186" y="654.2" width="104" height="39.8" class="washf"/><text x="238" y="640.2" text-anchor="middle" class="fs28">1.17</text><text x="238" y="780" text-anchor="middle" class="fs24 soft">2024</text><rect x="310" y="473" width="104" height="221" class="inkf"/><text x="362" y="459" text-anchor="middle" class="fs28">6.50</text><text x="362" y="780" text-anchor="middle" class="fs24 soft">2025</text><text x="300" y="816" text-anchor="middle" class="fs28">Revenue</text><rect x="626" y="694" width="104" height="15.3" class="washf"/><text x="678" y="741.3" text-anchor="middle" class="fs28">−0.45</text><text x="678" y="780" text-anchor="middle" class="fs24 soft">2024</text><rect x="750" y="624" width="104" height="70" class="inkf"/><text x="802" y="610" text-anchor="middle" class="fs28">2.06</text><text x="802" y="780" text-anchor="middle" class="fs24 soft">2025</text><text x="740" y="816" text-anchor="middle" class="fs28">Net profit</text><path class="ch-zero" d="M128 694 H940"/><text x="436" y="504.7" class="fs44"><tspan class="plus">+</tspan>453%</text></svg>
   <p class="lede" style="left:128px;top:225px;width:1664px;text-wrap:balance">Chipmakers faced the opposite shock: the controls raised domestic demand for their chips.</p>
@@ -2151,7 +2193,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e5" data-num="E5" data-spec="E5">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Open source generally sits outside the export rules</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px;text-wrap:balance">What stays outside the rules is <span class="mark nw">open, public collaboration</span>: one more reason to govern in the open.</p>
   <table class="lst" style="top:372px"><colgroup><col style="width:426px"><col style="width:1238px"></colgroup><tbody><tr><td class="l">U.S. regulation<br>15 CFR 734.3 and 734.7</td><td class="x">Published software is “not subject to the EAR,” and “posting on the Internet on sites available to the public” counts as published.</td></tr><tr><td class="l">AI Diffusion Rule<br>90 FR 4544 (15 Jan 2025)</td><td class="x">“BIS is not imposing controls on the model weights of <span class="nw">open-weight</span> models.”<span class="sub">BIS rescinded the rule on 13 May 2025; it is history, not current law.</span></td></tr><tr><td class="l">Linux Foundation<br>Jul 2020, updated 2021</td><td class="x">But “the private exchange of technology or technical information may not meet the ‘publicly available’ standard.”</td></tr></tbody></table>
@@ -2161,7 +2203,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e6" data-num="E6" data-spec="E6">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Huawei did it first, after 2019</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">Firm-specific sanctions, before our window. October 2022 hit the whole industry at once.</p>
   <table class="bt" style="left:128px;top:316px;width:1664px"><colgroup><col style="width:210px"><col style="width:1454px"></colgroup><thead><tr><th class="soft">Date</th><th class="soft">What happened</th></tr></thead><tbody><tr><td>9 Aug 2019</td><td>Richard Yu, Huawei: “If we are not able to use the Android operating system, then we can activate Harmony anytime.”</td></tr><tr><td>28 Mar 2020</td><td>MindSpore “officially goes open source on Gitee”</td></tr><tr><td>10 Sept 2020</td><td>HarmonyOS: open-source project donated to the OpenAtom Foundation</td></tr><tr class="shock"><td>7 Oct 2022</td><td>U.S. export controls: the whole industry at once</td></tr></tbody></table>
@@ -2171,7 +2213,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e7" data-num="E7" data-spec="E7">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">The West moved toward open weights after Chinese open models took off</h2>
   <p class="lede" style="left:128px;top:291px;width:1664px;text-wrap:balance">Openness responds to a firm’s dependence position: firms open up when they need outside complements.</p>
   <table class="lst" style="top:438px"><colgroup><col style="width:426px"><col style="width:1238px"></colgroup><tbody><tr><td class="l">Sam Altman, OpenAI<br>31 Jan 2025, after DeepSeek-R1</td><td class="x">“I personally think we have been on the wrong side of history here and need to figure out a different open source strategy.”</td></tr><tr><td class="l">White House, 23 Jul 2025<br><i>America’s AI Action Plan</i></td><td class="x">“We need to ensure America has leading open models founded on American values.”</td></tr><tr><td class="l">Counterpoint, 10 Dec 2025<br>Bloomberg, second-hand</td><td class="x">Meta’s next model, “Avocado,” will reportedly be closed.</td></tr></tbody></table>
@@ -2181,7 +2223,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e8" data-num="E8" data-spec="E8">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Is this just state policy?</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px;text-wrap:balance">No. The 2021 plan applied to treated and control firms alike; the AI<span class="plus">+</span> push came after the shock.</p>
   <table class="bt pol" style="left:128px;top:372px;width:1664px"><colgroup><col style="width:190px"><col style="width:1100px"><col style="width:374px"></colgroup><thead><tr><th class="soft">Date</th><th class="soft">Policy, in its own words</th><th class="soft">In our design</th></tr></thead><tbody><tr><td>13 Mar 2021</td><td>14th Five-Year Plan Outline<span class="en">“support the development of innovative consortia such as digital technology open source communities … encourage enterprises to open up software source code, hardware designs, and application services”</span></td><td class="ink">Before the shock, in our panel (Oct 2020 – Oct 2025): treated and control firms alike</td></tr><tr class="shock"><td>7 Oct 2022</td><td>U.S. export controls</td><td>the shock</td></tr><tr><td>26 Aug 2025</td><td>State Council “AI<span class="plus">+</span>” Opinions, Sec. III(11): support “open-source AI communities,” “internationally influential open-source projects” and incentives for “open-source AI contributions.”</td><td class="ink">After the firms’ moves, so not the cause in our window</td></tr></tbody></table>
@@ -2192,7 +2234,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e9" data-num="E9" data-spec="E9">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Four years on, the controls stay and compute still binds</h2>
   <table class="bt" style="left:128px;top:232px;width:1096px"><colgroup><col style="width:160px"><col style="width:556px"><col style="width:380px"></colgroup><thead><tr><th class="soft">Date</th><th class="soft">U.S. rule or event</th><th class="soft">Today</th></tr></thead><tbody><tr class="first-shock"><td>Oct 2022</td><td>Advanced-computing rule</td><td>in force</td></tr><tr><td>Oct 2023</td><td>Update closes the A800/H800 workaround</td><td>in force</td></tr><tr><td>Dec 2024</td><td>HBM controls, 140 Entity List additions</td><td>in force</td></tr><tr><td>Jan 2025</td><td>AI Diffusion Rule</td><td class="soft">rescinded 13 May 2025</td></tr><tr><td>Apr 2025</td><td>H20 needs a license</td><td class="soft">reversed Jul 2025</td></tr><tr><td>Dec 2025</td><td>H200 to case-by-case review, U.S. takes a 25% share</td><td>Blackwell, Rubin stay banned</td></tr><tr><td>Jun 2026</td><td>Rules also cover subsidiaries abroad</td><td>in force</td></tr><tr><td>Sept 2026</td><td>Trump–Xi summit</td><td>no chip deal</td></tr></tbody></table>
   <div class="ph" style="left:1264px;top:232px;width:520px;height:482px"><img src="assets/bis.png" alt="BIS press release of 7 October 2022, key sentence highlighted" style="width:528px;height:482px;left:-4px;top:0"></div>
@@ -2204,7 +2246,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e10" data-num="E10" data-spec="E10">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Big tech and startups both released open weights</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">Illustration: open-weight releases from big tech and startups alike.</p>
   <table class="bt grpc" style="top:316px;width:1096px"><colgroup><col style="width:130px"><col style="width:180px"><col style="width:350px"><col style="width:436px"></colgroup><thead><tr><th></th><th class="soft">Firm</th><th class="soft">Open-weight release</th><th class="soft">License</th></tr></thead><tbody><tr><td class="g" rowspan="3">Big tech</td><td>Alibaba<span class="soft">*</span></td><td>Qwen3, Apr 2025</td><td>Apache 2.0</td></tr><tr><td>Baidu<span class="soft">*</span></td><td>ERNIE 4.5, Jun 2025</td><td>Apache 2.0</td></tr><tr><td>Tencent<span class="soft">*</span></td><td>Hunyuan-A13B, Jun 2025</td><td>Custom: Tencent Hunyuan Community License</td></tr><tr class="gsep"><td class="g end" rowspan="5">Startups</td><td>DeepSeek<span class="soft">*</span></td><td>R1, Jan 2025</td><td>MIT</td></tr><tr><td>Moonshot<span class="soft">*</span></td><td>Kimi K2, Jul 2025</td><td>Modified MIT (attribution only)</td></tr><tr><td>MiniMax<span class="soft">*</span></td><td>M1 / M2, 2025</td><td>Apache 2.0 / MIT</td></tr><tr><td>Zhipu AI</td><td>GLM-4.5, Jul 2025</td><td>MIT</td></tr><tr><td>StepFun<span class="soft">*</span></td><td>Step3, 2025</td><td>Apache 2.0</td></tr></tbody></table>
@@ -2216,7 +2258,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e11" data-num="E11" data-spec="E11">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">DeepSeek open-sourced the plumbing, not just the model</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path class="ch-zero" d="M554 414 V790"/><text x="554" y="824" text-anchor="middle" class="fs24 soft">0</text><path class="ch-grid" d="M884.7 414 V790"/><text x="884.7" y="824" text-anchor="middle" class="fs24 soft">5,000</text><path class="ch-grid" d="M1215.4 414 V790"/><text x="1215.4" y="824" text-anchor="middle" class="fs24 soft">10,000</text><text x="554" y="392" class="fs28 soft">GitHub stars, 13 Oct 2026</text><text x="128" y="392" class="fs28 soft">Released</text><text x="128" y="467" class="fs24 soft">Day 1</text><text x="232" y="469" class="fs34">FlashMLA</text><rect x="554" y="440" width="864.5" height="36" class="greenf"/><rect x="1424.5" y="436" width="100.8" height="44" style="fill:var(--paper)"/><text x="1432.5" y="468" class="fs28 green">13,070</text><text x="128" y="539" class="fs24 soft">Day 2</text><text x="232" y="541" class="fs34">DeepEP</text><rect x="554" y="512" width="679.6" height="36" class="greenf"/><rect x="1239.6" y="508" width="100.8" height="44" style="fill:var(--paper)"/><text x="1247.6" y="540" class="fs28 green">10,274</text><text x="128" y="611" class="fs24 soft">Day 3</text><text x="232" y="613" class="fs34">DeepGEMM</text><rect x="554" y="584" width="592.2" height="36" class="greenf"/><rect x="1152.2" y="580" width="85.2" height="44" style="fill:var(--paper)"/><text x="1160.2" y="612" class="fs28 green">8,953</text><text x="128" y="683" class="fs24 soft">Day 4</text><text x="232" y="685" class="fs34">DualPipe, EPLB</text><rect x="557" y="652" width="865" height="44" style="fill:var(--paper)"/><text x="570" y="682" class="fs24 soft">stars not collected: our 13 Oct 2026 reading recorded only the other four repositories</text><text x="128" y="755" class="fs24 soft">Day 5</text><text x="232" y="757" class="fs34">3FS, smallpond</text><rect x="554" y="728" width="680" height="36" class="greenf"/><rect x="1240" y="724" width="169.1" height="44" style="fill:var(--paper)"/><text x="1248" y="756" class="fs28 green">10,281 (3FS)</text></svg>
   <p class="lede" style="left:128px;top:225px;width:1664px;text-wrap:balance">Open Source Week, from 24 Feb 2025: one infrastructure repository a day, all under the MIT license.</p>
@@ -2227,7 +2269,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e12" data-num="E12" data-spec="E12">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Once you open the model, you depend on everyone who serves it</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path class="hair-ink" style="stroke-linecap:butt" d="M128 232 H940"/><path class="hair-ink" style="stroke-linecap:butt" d="M980 232 H1792"/><rect x="128" y="340" width="812" height="44" class="washf"/><rect x="128" y="340" width="147.5" height="44" class="inkf"/><text x="128" y="326" class="fs28">218 <tspan class="fs24 soft">succeeded</tspan></text><text x="940" y="326" text-anchor="end" class="fs24 soft">of 1,200+ tool calls</text></svg>
   <p class="abs soft" style="left:128px;top:246.58px;width:812px;font-size:28px;line-height:38px;">Moonshot, Kimi K2 on vLLM</p>
@@ -2240,7 +2282,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e13" data-num="E13" data-spec="E13">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Recent studies and where ours sits</h2>
   <table class="lst" style="top:232px"><colgroup><col style="width:426px"><col style="width:1238px"></colgroup><tbody><tr><td class="l">Wang, Li &amp; Wang (2026)<br><i>Science</i></td><td class="x">After U.S. Entity List designation, firms filed 72% more domestic science-linked patents; we show firms also changed how they organize innovation.</td></tr><tr><td class="l">Chen et al. (2026)<br>SSRN</td><td class="x">Sanctioned firms filed about as many patents as before, but of lower quality; we look at open code and the community around it.</td></tr><tr><td class="l">Haese &amp; Peukert (2025)<br><i>Management Science</i></td><td class="x">One firm moves onto an open foundation (Edge onto Chromium); our firms open their own code and governance after a supply shock.</td></tr><tr><td class="l">Hoffmann, Nagle &amp; Zhou (2024)<br>HBS working paper</td><td class="x">$4.15B of supply-side value, $8.8T of demand-side value: most of the value is created in use, and our firms come to depend on those users.</td></tr><tr><td class="l">Nagle &amp; Yue (2025)<br>SSRN draft</td><td class="x">Open models took about 20% of tokens but 4% of revenue; we study how firms organize the outsiders they then depend on.</td></tr></tbody></table>
   <p class="src">Wang, Li &amp; Wang, <i>Science</i> 393, 1196–1199 (2026), DOI 10.1126/science.aed7991; Chen, Ding, He, Wang, Xia &amp; Yao, SSRN 7118620 (2026); Haese &amp; Peukert, <i>Management Science</i> (2025), DOI 10.1287/mnsc.2023.02886, and ProMarket (16 Dec 2025); Hoffmann, Nagle &amp; Zhou, HBS WP 24-038 (2024); Nagle &amp; Yue, SSRN 5767103 (18 Nov 2025).</p>
@@ -2249,7 +2291,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e14" data-num="E14" data-spec="E14">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Counter-evidence: tighter licenses at the very top, possible Chinese limits, licenses that exclude regions</h2>
   <p class="lede" style="left:128px;top:291px;width:1664px;text-wrap:balance">Tightening at the very top fits the dependence logic, and the paper codes license type, not “open” as one thing.</p>
   <table class="lst" style="top:438px"><colgroup><col style="width:426px"><col style="width:1238px"></colgroup><tbody><tr><td class="l">Tighter licenses at the very top</td><td class="x">Kimi K3 needs a separate agreement when a licensee’s revenue “exceeds 20 million US dollars.” Our window ends Oct 2025; 81% of large Chinese releases in 2026 stay Apache or MIT.</td></tr><tr><td class="l">Possible Chinese limits</td><td class="x">China’s Commerce Ministry (MOFCOM) is consulting; “No final implementation date has been announced” (Tech Times, citing the FT and Reuters). Proposals only.</td></tr><tr><td class="l">Licenses that exclude regions</td><td class="x">Tencent Hunyuan-A13B: “THIS LICENSE AGREEMENT DOES NOT APPLY IN THE EUROPEAN UNION, UNITED KINGDOM AND SOUTH KOREA.”</td></tr></tbody></table>
@@ -2259,7 +2301,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="c" id="e15" data-num="E15" data-spec="E15">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">China’s share of GitHub AI contributions is undercounted</h2>
   <p class="lede" style="left:128px;top:225px;width:1664px">IP geolocation undercounts China; our measure doesn’t use location.</p>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><path class="hair-ink" style="stroke-linecap:butt" d="M128 316 H940"/><path class="hair-ink" style="stroke-linecap:butt" d="M980 316 H1792"/><path class="ch-zero" d="M300 442 V846"/><text x="300" y="880" text-anchor="middle" class="fs24 soft">0%</text><path class="ch-grid" d="M524 442 V846"/><text x="524" y="880" text-anchor="middle" class="fs24 soft">10%</text><path class="ch-grid" d="M748 442 V846"/><text x="748" y="880" text-anchor="middle" class="fs24 soft">20%</text><text x="128" y="493" class="fs34 blue">U.S.</text><rect x="300" y="464" width="524.2" height="36" class="bluef"/><text x="838.2" y="492" class="fs28 blue">23.4%</text><text x="128" y="601" class="fs34">India</text><rect x="300" y="572" width="445.8" height="36" class="inkf"/><text x="759.8" y="600" class="fs28">19.9%</text><text x="128" y="709" class="fs34">Europe</text><rect x="300" y="680" width="436.8" height="36" class="inkf"/><text x="750.8" y="708" class="fs28">19.5%</text><text x="128" y="817" class="fs34 red">China</text><rect x="300" y="788" width="44.8" height="36" class="redf"/><text x="358.8" y="816" class="fs28 red">about 2%</text></svg>
@@ -2273,7 +2315,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-spec="6" id="e16" data-num="E16" data-insert-after="E15">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Open models multiply, and downloads shift to Chinese models</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><text x="128" y="256.5" class="fs34">Public models on Hugging Face</text><text x="128" y="296.5" class="fs28 soft">3 million reached on 18 August 2026</text><path class="ch-zero" d="M214 690 H1169"/><text x="196" y="698" text-anchor="end" class="ch-tick">0</text><path class="ch-grid" d="M214 593.1 H1169"/><text x="196" y="601.1" text-anchor="end" class="ch-tick">1M</text><path class="ch-grid" d="M214 496.2 H1169"/><text x="196" y="504.2" text-anchor="end" class="ch-tick">2M</text><path class="ch-grid" d="M214 399.4 H1169"/><text x="196" y="407.4" text-anchor="end" class="ch-tick">3M</text><path class="ch-zero" d="M405 690 v10"/><text x="405" y="730" text-anchor="middle" class="ch-tick">2025</text><path class="ch-zero" d="M863.4 690 v10"/><text x="863.4" y="730" text-anchor="middle" class="ch-tick">2026</text><path class="lk" d="M252.2 593.1 L672.4 507.9 L863.4 454.6 L1130.8 403.2"/><use href="#approx" x="266.2" y="614.5" width="15.7" height="28" style="color:var(--ink)"/><text x="285.6" y="639.1" class="fs28">1.0M</text><text x="266.2" y="671.1" class="fs24 soft">Sept 2024</text><text x="658.4" y="461.9" text-anchor="end" class="fs28 halo">1.88M</text><text x="658.4" y="491.9" text-anchor="end" class="fs24 soft halo">Aug 2025</text><text x="877.4" y="532.6" class="fs28 halo">2.43M</text><text x="877.4" y="562.6" class="fs24 soft halo">Jan 2026</text><text x="1116.8" y="357.2" text-anchor="end" class="fs28 halo">2.96M</text><text x="1116.8" y="387.2" text-anchor="end" class="fs24 soft halo">Aug 2026</text></svg>
   <p class="xs" style="left:128px;top:746.0px;width:1071.2px">Hugging Face; Longpre et al. (2025); Hugging Face, “State of Open Models, Summer 2026”. Points as reported, joined by straight lines.</p>
@@ -2285,7 +2327,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-spec="8" id="e17" data-num="E17" data-insert-after="6">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Developers download, and build on, Chinese open models</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><text x="128" y="256.5" class="fs34">Cumulative downloads of leading open models</text><text x="128" y="296.5" class="fs28 soft">about 1,500 open LLMs, counted since Nov 2023</text><path class="ch-zero" d="M214 720 H900"/><text x="196" y="728" text-anchor="end" class="ch-tick">0</text><path class="ch-grid" d="M214 622.9 H900"/><text x="196" y="630.9" text-anchor="end" class="ch-tick">1B</text><path class="ch-grid" d="M214 525.7 H900"/><text x="196" y="533.7" text-anchor="end" class="ch-tick">2B</text><path class="ch-grid" d="M214 428.6 H900"/><text x="196" y="436.6" text-anchor="end" class="ch-tick">3B</text><path class="lsoft" stroke-width="1.5" stroke-dasharray="3 6" d="M463.5 720 V374"/><text x="475.5" y="394" class="fs24">late Jul 2025:</text><text x="475.5" y="424" class="fs24">China passes U.S.</text><rect x="299.4" y="710.6" width="26" height="9.4" class="redf"/><rect x="329.4" y="702.8" width="26" height="17.2" class="bluef"/><text x="327.4" y="760" text-anchor="middle" class="ch-tick">Mar 2025</text><text x="239.6" y="714" class="fs24 halo">97M</text><text x="365.4" y="714" class="fs24 halo">177M</text><rect x="639.6" y="608.3" width="26" height="111.7" class="redf"/><rect x="669.6" y="649.8" width="26" height="70.2" class="bluef"/><text x="667.6" y="760" text-anchor="middle" class="ch-tick">Mar 2026</text><text x="569.1" y="632.3" class="fs24 halo">1.15B</text><text x="705.6" y="673.8" class="fs24 halo">723M</text><rect x="809.6" y="409.1" width="26" height="310.9" class="redf"/><rect x="839.6" y="564.6" width="26" height="155.4" class="bluef"/><text x="837.6" y="760" text-anchor="middle" class="ch-tick">Sept 2026</text><rect x="735.7" y="416.1" width="16.9" height="16" class="pap"/><use href="#approx" x="737.7" y="412" width="13.4" height="24" style="color:var(--ink)"/><text x="752.6" y="433.1" class="fs24 halo">3.2B</text><rect x="873.6" y="571.6" width="16.9" height="16" class="pap"/><use href="#approx" x="875.6" y="567.5" width="13.4" height="24" style="color:var(--ink)"/><text x="890.5" y="588.6" class="fs24 halo">1.6B</text><text x="799.6" y="463.1" text-anchor="end" class="fs24 red halo">China</text><text x="875.6" y="618.6" class="fs24 blue halo">U.S.</text><text x="980" y="256.5" class="fs34">Chinese models’ share of OpenRouter tokens</text><use href="#approx" x="980" y="289.4" width="32.5" height="58" style="color:var(--ink)"/><text x="1016" y="340.5" class="fs58">1.2%</text><text x="980" y="382.5" class="fs28 soft">late 2024</text><text x="1262" y="340.5" class="fs58">13%</text><text x="1262" y="382.5" class="fs28 soft">average,</text><text x="1262" y="416.5" class="fs28 soft">Nov 2024–Nov 2025</text><use href="#approx" x="1544" y="289.4" width="32.5" height="58" style="color:var(--ink)"/><text x="1580" y="340.5" class="fs58">30%</text><text x="1544" y="382.5" class="fs28 soft">in peak weeks,</text><text x="1544" y="416.5" class="fs28 soft">late 2025</text></svg>
   <p class="xs" style="left:128px;top:784.0px;width:812px">ATOM Report; Lambert, <em>Interconnects</em>, 21&nbsp;Sept&nbsp;2026. Values at the dates shown, as reported, not interpolated.</p>
@@ -2298,7 +2340,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-spec="16" id="e18" data-num="E18" data-insert-after="8">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">One firm constrained versus the whole field constrained</h2>
   <div class="hb" style="left:412px;top:224px;width:670px">Firm-specific constraint</div>
   <div class="hb" style="left:1122px;top:224px;width:670px">Field-wide constraint</div>
@@ -2310,7 +2352,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-spec="21" id="e19" data-num="E19" data-insert-after="16">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Outsiders contribute because contributing itself pays</h2>
   <div class="pc pc34" style="left:128px;top:207.1px;width:1664px">
     <p><span class="nm">Private investment</span><span class="g">innovate to own the returns</span></p>
@@ -2324,7 +2366,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" id="e20" data-num="E20" data-spec="24a" data-insert-after="21">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Frontier labs moved to more open licenses, 2024–2025</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><text x="128" y="249.3" class="fs24 soft">Firm</text><text x="390.3" y="249.3" class="fs24 soft">Weights before</text><text x="709.4" y="249.3" class="fs24 soft">Weights after</text><path class="hair-ink" d="M128 273.3 H978"/><text x="128" y="321.8" class="fs34">DeepSeek</text><text x="128" y="359.8" class="fs24 soft">Dec 2024 – Mar 2025</text><text x="390.3" y="321.8" class="fs28">DeepSeek-V3</text><text x="390.3" y="359.8" class="fs28 soft">custom “Model License”</text><text x="709.4" y="321.8" class="fs28">V3-0324</text><text x="709.4" y="359.8" class="fs28">MIT</text><path class="hair" d="M128 389.9 H978"/><text x="128" y="438.4" class="fs34">Alibaba</text><text x="128" y="476.4" class="fs24 soft">Sept 2024 – Apr 2025</text><text x="390.3" y="438.4" class="fs28">Qwen2.5-72B-Instruct</text><text x="390.3" y="476.4" class="fs28 soft">custom “qwen” license</text><text x="709.4" y="438.4" class="fs28">Qwen3-235B-A22B</text><text x="709.4" y="476.4" class="fs28">Apache 2.0</text><path class="hair" d="M128 506.6 H978"/><text x="128" y="555" class="fs34">Baidu</text><text x="128" y="593" class="fs24 soft">Jul 2024 – Jun 2025</text><text x="390.3" y="555" class="fs28">ERNIE</text><text x="390.3" y="593" class="fs28 soft">closed</text><text x="709.4" y="555" class="fs28">ERNIE 4.5, 10 variants</text><text x="709.4" y="593" class="fs28">Apache 2.0</text><path class="hair" d="M128 623.2 H978"/><text x="1026" y="650.7" class="fs24 soft">DeepSeek API Docs, News, 25 Mar 2025 · captured 13 Oct 2026</text><text x="1026" y="680.7" class="fs24 soft">benchmark chart and demo video omitted in capture</text><text x="128" y="883.2" class="fs24 soft">Hugging Face, Qwen/Qwen3-235B-A22B model card · captured 13 Oct 2026</text></svg>
   <div class="shot-d" style="left:1026px;top:232px;width:766px;height:391.4px"><img src="assets/screens/ds_api_news_v3_0324.png" alt="DeepSeek API Docs, News: DeepSeek-V3-0324 Release. Major boost in reasoning performance; Stronger front-end development skills; Smarter tool-use capabilities; For non-complex reasoning tasks, we recommend using V3 — just turn off “DeepThink”; API usage remains unchanged; Models are now released under the MIT License, just like DeepSeek-R1!" style="width:1292.6px;height:773.2px;left:-366.2px;top:-132.9px"><span class="ol-d" style="left:20.3px;top:349.5px;width:713.3px;height:35.9px"></span></div>
@@ -2335,7 +2377,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" id="e21" data-num="E21" data-spec="24b" data-insert-after="24a">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Baidu’s PaddlePaddle: outsiders can earn write access and elected seats</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><text x="1264" y="252.2" class="fs28">Open Source Development</text><text x="1264" y="288.2" class="fs28">Working Group</text><text x="1264" y="322.2" class="fs24 soft i">elected by past contributors</text><text x="1264" y="352.2" class="fs24 soft i">first term <tspan class="rn">21</tspan> Nov <tspan class="rn">2023</tspan> – <tspan class="rn">31</tspan> Dec <tspan class="rn">2024</tspan></text><text x="1260" y="468.3" class="fs96 green">5 of 9</text><text x="1264" y="520.3" class="fs28">seats held by people who</text><text x="1264" y="558.3" class="fs28">are not Baidu employees</text><text x="1264" y="620.3" class="fs24 soft i">charter: <tspan class="rn">4</tspan> Baidu employees, <tspan class="rn">5</tspan> non-Baidu members</text><text x="1264" y="704.3" class="fs28">Its remit includes how one</text><text x="1264" y="742.3" class="fs28">becomes a Committer.</text><text x="1264" y="802.3" class="fs28 soft">Timing: the contributor club (PFCC)</text><text x="1264" y="840.3" class="fs28 soft">dates from Apr 2022, before the controls;</text><text x="1264" y="878.3" class="fs28 soft">the working group, from Nov 2023.</text></svg>
   <div class="abs" style="left:128px;top:240px;width:1060px">
@@ -2352,7 +2394,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" id="e22" data-num="E22" data-spec="25a" data-insert-after="24b">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">DeepSeek, in its own words, chose to depend on outsiders</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><text x="128" y="458.4" class="fs24 soft">DeepSeek, open-infra-index README, Apr 2025 · captured 13 Oct 2026</text><text x="980" y="817.9" class="fs24 soft">GitHub, deepseek-ai/DeepSeek-V3, merged pull requests · captured 13 Oct 2026</text><text x="124" y="574.5" class="fs96 green">25 of 25</text><text x="128" y="630.5" class="fs28">merged pull requests came from outside accounts</text><text x="128" y="664.5" class="fs24 soft">21 accounts · captured 13 Oct 2026</text></svg>
   <div class="shot-d" style="left:128px;top:232px;width:1434.4px;height:199.1px"><img src="assets/screens/gh_ds_infra_engine.png" alt="DeepSeek README, The Path to Open-Sourcing the DeepSeek Inference Engine: challenges (codebase divergence, infrastructure dependencies, limited maintenance bandwidth) and: Considering these challenges, we’ve decided to collaborate with existing open-source projects as more sustainable alternatives." style="width:1537.3px;height:1132.3px;left:-25.3px;top:-918px"><span class="hl-d" style="left:405px;top:117.3px;width:933.2px;height:37.1px"></span><span class="hl-d" style="left:11.8px;top:157.8px;width:313.9px;height:32.1px"></span></div>
@@ -2363,7 +2405,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" data-part="b" id="e23" data-num="E23" data-spec="35" data-insert-after="25a">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Other chokepoints, from one firm to a whole field</h2>
   <table class="bt roomy" id="t35-ctl" style="top:232px;width:1664px">
     <colgroup><col style="width:640px"><col style="width:704px"><col style="width:320px"></colgroup>
@@ -2384,7 +2426,7 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
 
 
 <section class="slide" id="e24" data-num="E24" data-spec="35a" data-insert-after="35">
-  <a class="back" href="#e-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Examples from the field</a>
+  <a class="back" href="#b-index"><svg class="ar" viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5L2.5 8L7 12.5"/></svg>Contents</a>
   <h2 class="t">Open hardware moved to Switzerland to stay open</h2>
   <svg class="fig" viewBox="0 0 1920 1080" aria-hidden="true"><text x="128" y="273.8" class="fs58">“we’re taking out an</text><text x="151.6" y="345.8" class="fs58">insurance policy against</text><text x="151.6" y="417.8" class="fs58">that type of action by</text><text x="151.6" y="489.8" class="fs58">moving our incorporation.”</text><text x="128" y="545.8" class="fs24 soft">Calista Redmond, CEO of RISC-V, quoted by Reuters, 25 November 2019</text><text x="980" y="256.5" class="fs34">RISC-V, the open instruction-set standard for</text><text x="980" y="302.5" class="fs34">chips, moved its incorporation from the U.S. to</text><text x="980" y="348.5" class="fs34">Switzerland “after several of the group’s foreign</text><text x="980" y="394.5" class="fs34">members raised concerns about potential U.S.</text><text x="980" y="440.5" class="fs34">trade curbs” (Reuters, 25 November 2019).</text><text x="980" y="510.5" class="fs34">The move took effect in March 2020.</text></svg>
   <p class="src">Reuters, 25 Nov 2019 (via Yahoo Finance, ca.finance.yahoo.com); RISC-V FAQ, riscv.org (move effective March 2020).</p>
