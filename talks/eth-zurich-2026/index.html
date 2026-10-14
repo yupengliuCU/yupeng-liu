@@ -1335,13 +1335,13 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
     <thead><tr><th>Step</th><th></th><th>What we do</th></tr></thead>
     <tbody>
       <tr><td class="soft">1</td><td>Push events</td><td>Only developers with write access can push, so push events show who holds it</td></tr>
-      <tr class="frag" data-k="2" data-fg="1"><td class="soft">2</td><td>Identify people</td><td>Match pushers to Revelio employment spells (5,331 matched); email domains, company fields, bios</td></tr>
-      <tr class="frag" data-k="3" data-fg="1"><td class="soft">3</td><td>Insider or outsider</td><td>Coded month by month; a push keeps access active for three months</td></tr>
-      <tr class="frag" data-k="4" data-fg="1"><td class="soft">4</td><td>Measure</td><td>1 if verified employees hold less than half of active write access, else 0</td></tr>
-      <tr class="cut frag" data-k="5" data-fg="1"><td></td><td>Sample</td><td>386 firms with push activity, 11,923 firm-months</td></tr>
+      <tr  data-k="2"><td class="soft">2</td><td>Identify people</td><td>Match pushers to Revelio employment spells (5,331 matched); email domains, company fields, bios</td></tr>
+      <tr  data-k="3"><td class="soft">3</td><td>Insider or outsider</td><td>Coded month by month; a push keeps access active for three months</td></tr>
+      <tr  data-k="4"><td class="soft">4</td><td>Measure</td><td>1 if verified employees hold less than half of active write access, else 0</td></tr>
+      <tr class="cut" data-k="5"><td></td><td>Sample</td><td>386 firms with push activity, 11,923 firm-months</td></tr>
     </tbody>
   </table>
-  <p class="take frag" id="f-t27-take" style="left:128px;top:830px;font-size:34px;line-height:46px" data-k="6" data-fg="2">A one means the firm has given up exclusive control of its code.</p>
+  <p class="take frag" id="f-t27-take" style="left:128px;top:830px;font-size:34px;line-height:46px" data-k="6" data-fg="1">A one means the firm has given up exclusive control of its code.</p>
   <aside class="notes"></aside>
 </section>
 
@@ -1353,10 +1353,10 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
     <div class="end"><p class="ts-d">Oct 2025</p><p class="ts-e">panel ends</p><p class="ts-w">36 months post</p></div>
   </div>
   <p class="abs" id="t28-groups" style="left:128px;top:400px;width:1664px;font-size:var(--t-body);line-height:46px;border-top:1.5px solid var(--rule);padding-top:12px" data-k="1"><span class="red">Treated 143</span> (levels 3–5) · Control 521 (levels 1–2)</p>
-  <p class="math abs frag" style="left:124px;top:510px;font-size:44px;line-height:56px" data-k="2" data-fg="1"><i>Y</i><sub><i>it</i></sub><span class="op">=</span><span class="mark"><i class="gk">β</i></span>(Treated<sub><i>i</i></sub><span class="op">×</span>Post<sub><i>t</i></sub>)<span class="op">+</span><i class="gk">α</i><sub><i>i</i></sub><span class="op">+</span><i class="gk">δ</i><sub><i>t</i></sub><span class="op">+</span><i class="gk">γ</i><span class="pr">′</span><i>X</i><sub><i>it</i></sub><span class="op">+</span><i class="gk">ε</i><sub><i>it</i></sub></p>
-  <p class="body28 soft frag" style="left:128px;top:590px;width:940px" data-k="3" data-fg="1">Firm and calendar-month fixed effects; controls for VC backing, listing and prior acquisition; standard errors clustered by firm.</p>
-  <p class="body28 soft frag" style="left:128px;top:684px;width:940px" data-k="4" data-fg="1">Coarsened exact matching on VC backing, listing, size, and quartiles of firm and GitHub age.</p>
-  <table class="bt frag" id="t28-thr" style="left:1122px;top:500px;width:670px" data-k="5" data-fg="2">
+  <p class="math abs" style="left:124px;top:510px;font-size:44px;line-height:56px" data-k="2"><i>Y</i><sub><i>it</i></sub><span class="op">=</span><span class="mark"><i class="gk">β</i></span>(Treated<sub><i>i</i></sub><span class="op">×</span>Post<sub><i>t</i></sub>)<span class="op">+</span><i class="gk">α</i><sub><i>i</i></sub><span class="op">+</span><i class="gk">δ</i><sub><i>t</i></sub><span class="op">+</span><i class="gk">γ</i><span class="pr">′</span><i>X</i><sub><i>it</i></sub><span class="op">+</span><i class="gk">ε</i><sub><i>it</i></sub></p>
+  <p class="body28 soft" style="left:128px;top:590px;width:940px" data-k="3">Firm and calendar-month fixed effects; controls for VC backing, listing and prior acquisition; standard errors clustered by firm.</p>
+  <p class="body28 soft" style="left:128px;top:684px;width:940px" data-k="4">Coarsened exact matching on VC backing, listing, size, and quartiles of firm and GitHub age.</p>
+  <table class="bt frag" id="t28-thr" style="left:1122px;top:500px;width:670px" data-k="5" data-fg="1">
     <colgroup><col style="width:250px"><col style="width:420px"></colgroup>
     <thead><tr><th>Threat</th><th>Where it is addressed</th></tr></thead>
     <tbody>
@@ -1384,8 +1384,8 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
     <div class="exr" style="left:0;top:0;width:1664px;height:539.6px"><img src="assets/paper/fig2_event_study_body_lab.png" style="left:-15.3px;top:-85.2px;width:1695.5px" alt="Paper, Figure 2, panels (a) permissive project release and (b) gatekeeping openness"></div>
   </div>
   <p class="vbar frag" id="v30" style="left:128px;top:796px;min-width:1664px" data-k="1" data-fg="1">Point estimates turn positive after October 2022 and stay positive; pre-trend tests do not reject.</p>
-  <p class="body28 frag" id="p30" style="left:128px;top:872px;width:1664px" data-k="2" data-fg="2">Panel (b): 1 if verified employees hold less than half of active write access. Joint pre-trend <i>p</i>: .41 <span class="soft">(a)</span>, .71 <span class="soft">(b)</span>.</p>
-  <p class="src frag" data-k="3" data-fg="2">Paper, Figure 2. 90% CIs clustered by firm; the [−6, −1] bin is the reference (hollow circle).</p>
+  <p class="body28 frag" id="p30" style="left:128px;top:872px;width:1664px" data-k="2" data-fg="1">Panel (b): 1 if verified employees hold less than half of active write access. Joint pre-trend <i>p</i>: .41 <span class="soft">(a)</span>, .71 <span class="soft">(b)</span>.</p>
+  <p class="src frag" data-k="3" data-fg="1">Paper, Figure 2. 90% CIs clustered by firm; the [−6, −1] bin is the reference (hollow circle).</p>
   <svg class="stub" id="ch-es" viewBox="0 0 1920 1080" aria-hidden="true" data-k="4"></svg>
   <aside class="notes"></aside>
 </section>
@@ -1396,8 +1396,8 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
     <div class="exr" style="left:0;top:0;width:1664px;height:539.6px"><img src="assets/paper/fig2_event_study_body_lab.png" style="left:-15.3px;top:-733.2px;width:1695.5px" alt="Paper, Figure 2, panels (c) forks and (d) external pull requests"></div>
   </div>
   <p class="vbar frag" id="v30b" style="left:128px;top:796px;min-width:1664px" data-k="1" data-fg="1">Point estimates turn positive after October 2022 and stay positive; pre-trend tests do not reject.</p>
-  <p class="body28 frag" id="p30b" style="left:128px;top:872px;width:1664px" data-k="2" data-fg="2">Joint pre-trend <i>p</i>: .50 <span class="soft">(c)</span>, .14 <span class="soft">(d)</span></p>
-  <p class="src frag" data-k="3" data-fg="2">Paper, Figure 2. 90% CIs clustered by firm; the [−6, −1] bin is the reference (hollow circle).</p>
+  <p class="body28 frag" id="p30b" style="left:128px;top:872px;width:1664px" data-k="2" data-fg="1">Joint pre-trend <i>p</i>: .50 <span class="soft">(c)</span>, .14 <span class="soft">(d)</span></p>
+  <p class="src frag" data-k="3" data-fg="1">Paper, Figure 2. 90% CIs clustered by firm; the [−6, −1] bin is the reference (hollow circle).</p>
   <aside class="notes"></aside>
 </section>
 
@@ -1407,8 +1407,8 @@ section.slide:is([data-spec="24a"],[data-spec="24b"],[data-spec="25a"],[data-spe
   <p class="vbar frag" style="left:128px;top:892px;min-width:1197.3px" data-k="3" data-fg="1">All four indirect effects are significant; licensing carries the larger share.</p>
   <div class="abs" style="left:1366px;top:232px;width:426px;border-top:2.4px solid var(--ink)" data-k="4"></div>
   <p class="body28 soft" id="m31-bk" style="left:1366px;top:246px;width:426px" data-k="5">Baron–Kenny decomposition; descriptive, not a causal mediation estimate.</p>
-  <p class="body28 frag" id="f-m31-abs" style="left:1366px;top:400px;width:426px" data-k="6" data-fg="2">In absolute terms the gatekeeping indirect effects are larger, but those models run on the 386-firm subsample, so the paper compares shares.</p>
-  <p class="src frag" data-k="7" data-fg="2">Paper, Table 4. Single-mediator models, so shares do not add. Bias-corrected cluster bootstrap. *** <i>p</i> &lt; 0.01.</p>
+  <p class="body28 frag" id="f-m31-abs" style="left:1366px;top:400px;width:426px" data-k="6" data-fg="1">In absolute terms the gatekeeping indirect effects are larger, but those models run on the 386-firm subsample, so the paper compares shares.</p>
+  <p class="src frag" data-k="7" data-fg="1">Paper, Table 4. Single-mediator models, so shares do not add. Bias-corrected cluster bootstrap. *** <i>p</i> &lt; 0.01.</p>
   <aside class="notes"></aside>
 </section>
 
